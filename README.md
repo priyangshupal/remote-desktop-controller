@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Peer-to-peer remote desktop control and access tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project introduces a browser-centric web application leveraging peer-to-peer communication for seamless remote desktop access. This project offers an inbrowser remote desktop experience by integrating state-of-the-art technologies including Google’s WebRTC framework, STUN servers, and signaling servers.
 
-In the project directory, you can run:
+## Motivation
 
-### `npm start`
+In the modern tech environment, remote desktop sharing is very popular and often muchneeded for daily work. Yet, many existing solutions hinge on the conventional client-server model, necessitating additional tools and software for effective desktop access. There exists a notable research gap concerning Desktop-as-a-Service (DaaS) delivery via a peer-to-peer architecture.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Workflow
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Remote desktop controller architecture and workflow](./docs/remote-desktop-control-workflow.svg)
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project requires a package manager - `yarn` or `node` is recommended.
 
-### `npm run build`
+To install the dependencies, inside the project directory, run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Steps to run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Running the project will be done in two steps:
 
-### `npm run eject`
+1. Prepare build files for the React application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+yarn build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Start the electron app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+yarn electron
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will bring up the electron app and serve the react build at PORT 4000. A tunnel may be setup to http://localhost:4000/ to access the application remotely.
+The remote application will now be able to access and control the host computer's screen from its browser.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usage is provided under the [MIT License](https://opensource.org/license/mit). See LICENSE for the full details.
