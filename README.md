@@ -10,7 +10,7 @@ In the modern tech environment, remote desktop sharing is very popular and often
 
 ## Workflow
 
-![Remote desktop controller architecture and workflow](./docs/remote-desktop-control-workflow.svg)
+![Remote desktop controller architecture and workflow](https://raw.githubusercontent.com/priyangshupal/documentation-images/main/remote-desktop-controller/remote-desktop-control-workflow.svg)
 
 ## Setup
 
