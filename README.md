@@ -14,7 +14,7 @@ In the modern tech environment, remote desktop sharing is very popular and often
 
 ## Setup
 
-This project requires a package manager - `yarn` or `node` is recommended.
+This project requires a package manager - `yarn` or `npm` is recommended.
 
 To install the dependencies, inside the project directory, run:
 
